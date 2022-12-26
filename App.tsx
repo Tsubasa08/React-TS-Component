@@ -64,6 +64,10 @@ const Children = (props: ChildrenProps) => {
   );
 };
 
+const SpreadAttributes = ({ ...props }) => {
+  return <div {...props}>Spread Attributes</div>;
+};
+
 export default function App() {
   return (
     <div>
@@ -78,6 +82,7 @@ export default function App() {
       <Children>
         <p>children</p>
       </Children>
+      <SpreadAttributes style={{ color: 'red' }} />
     </div>
   );
 }
